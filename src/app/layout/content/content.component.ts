@@ -25,8 +25,7 @@ export class ContentComponent implements OnInit {
     this.service.findCourse(data).subscribe((response) => {
       console.log(response)
       if (response['success'] === true) {
-        this.course = response['data'][0];
-        console.log(this.course)
+        this.course = response['data'][1];
       }
     });
 

@@ -4,6 +4,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {IndexComponent} from './index/index.component';
 import {DetailsComponent} from '../details/details.component';
 import {CartComponent} from './cart/cart.component';
+import {ContentAllComponent} from './film/hottest-content/content-all/content-all.component';
+import {QuestionsArticalComponent} from './film/hottest-content/questions-artical/questions-artical.component';
 
 
 const routes: Routes = [
@@ -20,9 +22,17 @@ const routes: Routes = [
     loadChildren: () => import('./article/detailarticle/detailarticle.module').then(m => m.DetailarticleModule)
   },
   {
+    path: 'content-all',
+    component: ContentAllComponent
+  },
+  {
     path: 'cart',
-    component:CartComponent
-  }
+    component: CartComponent
+  },
+  {
+    path: 'questionDettail',
+    component: QuestionsArticalComponent
+  },
 ];
 
 @NgModule({

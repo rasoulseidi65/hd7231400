@@ -12,6 +12,8 @@ import {UserslistComponent} from './users/userslist/userslist.component';
 import {EposideComponent} from './Eposide/eposide/eposide.component';
 import {QuestionsComponent} from './questions/questions.component';
 import {HandoutComponent} from './handout/handout.component';
+import {GradeComponent} from './grade/grade.component';
+import {MajorComponent} from './major/major.component';
 
 
 const routes: Routes = [
@@ -102,6 +104,22 @@ const routes: Routes = [
     children: [{
       path: 'handout',
       component: HandoutComponent
+    }]
+  },
+  {
+    path: '',
+    component: DashboardComponent,
+    children: [{
+      path: 'grade',
+      component: GradeComponent
+    }]
+  },
+  {
+    path: '',
+    component: DashboardComponent,
+    children: [{
+      path: 'major',
+      component: MajorComponent
     }]
   }
 ];

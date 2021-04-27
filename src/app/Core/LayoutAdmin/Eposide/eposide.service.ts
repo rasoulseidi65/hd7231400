@@ -13,13 +13,13 @@ export class EposideService {
     this.http = http;
   }
   indexCourse() {
-    return this.http.get('http://localhost:1025/api/v1/admin/index');
+    return this.http.get('http://api.hd724.com/api/v1/admin/index');
   }
   storeEposide(data:any) {
-    return this.http.post('http://localhost:1025/api/v1/admin/episode',data);
+    return this.http.post('http://api.hd724.com/api/v1/admin/episode',data);
   }
   uploadVideo(video:any) {
-    return this.http.post('http://localhost:1025/api/v1/admin/video', video);
+    return this.http.post('http://api.hd724.com/api/v1/admin/video', video);
   }
 
 }

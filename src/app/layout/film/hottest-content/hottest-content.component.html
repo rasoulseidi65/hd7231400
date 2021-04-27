@@ -2,14 +2,14 @@
   <div class="row row-film">
     <div class="caption">
       <span>داغ ترین مطالب</span>
-      <a class="pull-left" routerLink="/Courses/films">همه<i class="fas fa-angle-left"></i></a>
+<!--      <a class="pull-left" routerLink="/Courses/films">همه<i class="fas fa-angle-left"></i></a>-->
     </div>
     <div class="card-content">
       <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide>
 
           <div class="thumbnail thumbnail-body-film">
-            <a>
+            <a [routerLink]="['content-all']">
               <div class="panel-heading">
                 <img class="img-responsive" src="./../../../../assets/bootstrap/img/schoole.jpg"  alt="">
               </div>
@@ -29,7 +29,7 @@
         <ng-template carouselSlide>
 
           <div class="thumbnail thumbnail-body-film">
-            <a>
+            <a [routerLink]="['content-all']">
               <div class="panel-heading">
                 <img class="img-responsive" src="./../../../../assets/bootstrap/img/daneshga.jpg"  alt="">
               </div>
@@ -49,7 +49,7 @@
         <ng-template carouselSlide>
 
           <div class="thumbnail thumbnail-body-film">
-            <a>
+            <a [routerLink]="['content-all']">
               <div class="panel-heading">
                 <img class="img-responsive" src="./../../../../assets/bootstrap/img/jozveh.jpg"  alt="">
               </div>
@@ -74,7 +74,7 @@
                 <img class="img-responsive" src="./../../../../assets/bootstrap/img/nemoneh.jpg"  alt="">
               </div>
               <div class="panel-body">
-                <a href="#"><span><i class="fa fa-circle"></i>نمونه کارهای طراحی شده</span></a>
+                <a href="#"><span><i class="fa fa-circle"></i>نمونه کارهای طراحی سایت</span></a>
               </div>
             </a>
             <a routerLink="/detail">

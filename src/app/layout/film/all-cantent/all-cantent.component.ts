@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {OwlOptions} from 'ngx-owl-carousel-o';
+import {LayoutService} from '../../layout.service';
 
 @Component({
   selector: 'app-all-cantent',
@@ -7,6 +8,7 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
   styleUrls: ['./all-cantent.component.scss']
 })
 export class AllCantentComponent implements OnInit {
+  listCourse:any[];
   customOptions: OwlOptions = {
     rtl: true,
     autoplay: true,
@@ -35,9 +37,15 @@ export class AllCantentComponent implements OnInit {
       }
     }
   };
-  constructor() { }
+  constructor(private service: LayoutService ) { }
 
   ngOnInit(): void {
+    this.service.listCourse().subscribe((response)=>{
+      if(response['success']===true){
+        this.listCourse=response['data'];
+
+      }
+    });
   }
 
 }

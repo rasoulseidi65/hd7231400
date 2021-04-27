@@ -46,8 +46,9 @@ export class MastercourseComponent implements OnInit {
     }
     console.log(this.lisEpisode)
    this.service.registerCourse(data1).subscribe((response)=>{
+     this.courseForm = response['data'];
      console.log(response)
-   })
+   });
   }
 
   CreatFormCourse(){

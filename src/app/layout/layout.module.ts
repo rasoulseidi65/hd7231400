@@ -19,8 +19,8 @@ import {
   AccordionModule,
   ButtonModule,
   CardModule,
-  InputTextareaModule,
-  OrderListModule,
+  InputTextareaModule, InputTextModule,
+  OrderListModule, PaginatorModule,
   PanelModule,
   SharedModule
 } from 'primeng/primeng';
@@ -32,10 +32,14 @@ import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
 import { CooperationComponent } from './cooperation/cooperation.component';
 import {CarouselModule} from 'ngx-owl-carousel-o';
-import {AllCantentComponent} from './film/all-cantent/all-cantent.component';
+// import {AllCantentComponent} from './film/all-cantent/all-cantent.component';
 import {HottestContentComponent} from './film/hottest-content/hottest-content.component';
 import {MostDownloadsComponent} from './film/most-downloads/most-downloads.component';
 import {MostPopularContentComponent} from './film/most-popular-content/most-popular-content.component';
+import { ContentAllComponent } from './film/hottest-content/content-all/content-all.component';
+import {MatGridListModule} from '@angular/material';
+import {AllCantentComponent} from './film/all-cantent/all-cantent.component';
+import { QuestionsArticalComponent } from './film/hottest-content/questions-artical/questions-artical.component';
 
 
 
@@ -44,7 +48,11 @@ import {MostPopularContentComponent} from './film/most-popular-content/most-popu
 
 @NgModule({
   declarations: [IndexComponent, HeaderComponent, CommentComponent
-    , FilmComponent, ArticleComponent, TopMenuComponent, CenterMenuComponent,MenuComponent,FooterComponent, CartComponent, CooperationComponent,AllCantentComponent,HottestContentComponent,MostDownloadsComponent,MostPopularContentComponent ],
+    , FilmComponent, ArticleComponent, TopMenuComponent,
+    CenterMenuComponent,MenuComponent,FooterComponent,
+    CartComponent, CooperationComponent,HottestContentComponent,
+    MostDownloadsComponent,MostPopularContentComponent,
+    ContentAllComponent,AllCantentComponent, QuestionsArticalComponent ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
@@ -60,12 +68,16 @@ import {MostPopularContentComponent} from './film/most-popular-content/most-popu
     TableModule,
     AccordionModule,
     ToastModule,
-    CarouselModule
+    CarouselModule,
+    MatGridListModule,
+    PaginatorModule,
+    InputTextModule
 
   ],
   exports: [IndexComponent,
     HeaderComponent,
-    FilmComponent, ArticleComponent, CommentComponent, TopMenuComponent, CenterMenuComponent,MenuComponent,FooterComponent],
+    FilmComponent, ArticleComponent, CommentComponent,
+    TopMenuComponent, CenterMenuComponent,MenuComponent,FooterComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],

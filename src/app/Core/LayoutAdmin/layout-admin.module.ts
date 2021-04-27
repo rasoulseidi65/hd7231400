@@ -3,7 +3,15 @@ import {CommonModule} from '@angular/common';
 
 import {LayoutAdminRoutingModule} from './layout-admin-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {MatButtonModule, MatIconModule, MatListModule, MatRadioModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatListModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 import {AccordionModule} from 'primeng/accordion';
 import {
   DialogModule,
@@ -28,15 +36,17 @@ import {NewteacherComponent} from './teacher/newteacher/newteacher.component';
 import {TeacherlistComponent} from './teacher/teacherlist/teacherlist.component';
 import {NewcoursesComponent} from './Courses/newcourses/newcourses.component';
 import {ListcoursesComponent} from './Courses/listcourses/listcourses.component';
-import {IRCurrencyPipe} from 'ngx-persian';
+// import {IRCurrencyPipe} from 'ngx-persian';
 import { UserslistComponent } from './users/userslist/userslist.component';
 import { EposideComponent } from './Eposide/eposide/eposide.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { HandoutComponent } from './handout/handout.component';
+import { GradeComponent } from './grade/grade.component';
+import { MajorComponent } from './major/major.component';
 
 
 @NgModule({
-  declarations: [IRCurrencyPipe, DashboardComponent, ContentdashboardComponent, NewpaperComponent, PaperlistComponent, NewteacherComponent, TeacherlistComponent, NewcoursesComponent, ListcoursesComponent, UserslistComponent, EposideComponent, QuestionsComponent, HandoutComponent],
+  declarations: [ DashboardComponent, ContentdashboardComponent, NewpaperComponent, PaperlistComponent, NewteacherComponent, TeacherlistComponent, NewcoursesComponent, ListcoursesComponent, UserslistComponent, EposideComponent, QuestionsComponent, HandoutComponent, GradeComponent, MajorComponent],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -70,6 +80,7 @@ import { HandoutComponent } from './handout/handout.component';
     MenubarModule,
     TreeTableModule,
     FormsModule,
+    MatSelectModule,
 
   ],
 

@@ -34,10 +34,10 @@ const routes: Routes = [
     path: 'teacher',
     loadChildren: () => import('./layout/teacher-come/teacher-come.module').then(m => m.TeacherComeModule)
   },
-  // {
-  //   path: 'detail',
-  //   loadChildren: () => import('./details/details.module').then(m => m.DetailsModule)
-  // },
+  {
+    path: 'detail',
+    loadChildren: () => import('./details/details.module').then(m => m.DetailsModule)
+  },
   // {
   //   path: 'detailArticle',
   //   loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)

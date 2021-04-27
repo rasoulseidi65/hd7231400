@@ -7,6 +7,11 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {AccordionModule} from 'primeng/accordion';
 import {LayoutModule} from '../layout.module';
+import {MessageModule} from 'primeng/message';
+import {ToastModule} from 'primeng/toast';
+import {PanelModule} from 'primeng/panel';
+import {FileUploadModule} from 'primeng/fileupload';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +22,12 @@ import {LayoutModule} from '../layout.module';
     ButtonModule,
     InputTextareaModule,
     AccordionModule,
-    LayoutModule
+    LayoutModule,
+    MessageModule,
+    ToastModule,
+    PanelModule,
+    FileUploadModule,
+    ReactiveFormsModule
   ]
 })
 export class TeacherComeModule { }
